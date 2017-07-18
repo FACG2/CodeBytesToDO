@@ -16,45 +16,16 @@ var todoFunctions = {
 
     return incrementCounter;
   })(),
+
   addTodo: function(todos, newTodo) {
-    // should leave the input argument todos unchanged
-    // returns a new array, it should contain todos with the newTodo added to the end.
-    // add an id to the newTodo. You can use the generateId function to create an id.
-// hint: array.concat
-    // newTodo = {id: 0,description: 'make eggs',done: false,}
+
     newTodo.id = todoFunctions.generateId();
     newTodo.state= false;
     var newtodos= todos.concat(newTodo);
 
     return newtodos;
   },
-  // deleteTodo: function(todos, idToDelete) {
-  //   // should leave the input argument todos unchanged
-  //   // return a new array, this should not contain any todo with an id of idToDelete
-  //   // hint: array.filter
-  // },
-  // markTodo: function(todos, idToMark) {
-  //   // should leave the input argument todos unchanged
-  //   // in the new todo array, all elements will remain unchanged except the one with id: idToMark
-  //   // this element will have its done value toggled
-  //   // hint: array.map
-  //
-  //   return todos.map(function (updateTodos,index) {
-  //     console.log(index);
-  //     for (var i=0; i<todos.length; i++){
-  //       if (idToMark == todos[i].id){
-  //         if (todos[i].state == false){
-  //         todos[i].state = true;}
-  //
-  //          else if (idToMark == true){
-  //         todos[i].state = false;}
-  //       }
-  //     }
-  //
-  //     return updateTodos;}
-  //   );
-  //
-  // },
+
 
   markTodo: function(todos, idToMark) {
 
@@ -76,12 +47,32 @@ var todoFunctions = {
 
 
  },
-  // sortTodos: function(todos, sortFunction) {
-  //   // stretch goal! Do this last
-  //   // should leave the input arguement todos unchanged
-  //   // sortFunction will have same signature as the sort function in array.sort
-  //   // hint: array.slice, array.sort
-  // },
+
+
+  deleteTodo: function(todos, idToDelete) {
+    // should leave the input argument todos unchanged
+    // return a new array, this should not contain any todo with an id of idToDelete
+    // hint: array.filter
+    if(idToDelete === undefined || typeof idToDelete === 'string')
+      return "todo not found";
+
+    var updatedTodos = todos.filter(function(todo){
+      return todo.id !== idToDelete;
+     });
+    return updatedTodos;
+  },
+
+
+
+  sortTodos: function(todos, sortFunction) {
+
+
+    var sortedTodos = sortFunction(todos);
+    return sortedTodos;
+
+  },
+
+
 };
 
 
