@@ -1,6 +1,14 @@
 var test = require('tape');
 var todoFunctions = require('./logic');
 
+
+
+test('Example test', function(t) {
+  var actual =  todoFunctions.addTodo([],{description:'make'});
+  var expected = [{description:"make",id:1,state:false}];
+  t.deepEqual(actual, expected, 'Should return new array');
+
+
 test('Example test', function(t) {
   var actual = todoFunctions.deleteTodo([{id:0, description: "todo 1", done: false}, {id:1, description: "todo 2", done: true}], 1);
   var expected = [{id:0, description: "todo 1", done: false}];
@@ -86,5 +94,20 @@ test('Example test', function(t){
                   {id:1, description: "todo 1", done: true},
                   {id:0, description:"todo 0", done: true}];
   t.deepEqual(actual , expected , "The Array Should be sorted");
+
   t.end();
+});
+
+test('Example test', function(t) {
+  var old=[{description:"make",id:1,state:true},{description:"make",id:2,state:false}];
+  var newone=[{description:"make",id:1,state:true},{description:"make",id:2,state:true}];
+  console.log(old);
+  var actual =  todoFunctions.markTodo(old,2);
+  var expected = newone;
+  console.log(newone);
+  console.log(old);
+  t.deepEqual(actual, expected, 'True');
+  t.end();
+
+  // console.log(newone);
 });
