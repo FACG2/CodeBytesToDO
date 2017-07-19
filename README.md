@@ -6,12 +6,12 @@
   Use TDD to build a ToDo App.
 
 * ## Project main parts :
-  1. Use TDD to create the logic needed to modify the ToDo list and write the tests in javascrpit `tests.js`.
-  2. Render the ToDo list to the DOM.
-  3. Add another features.
+   1. Use TDD to create the logic needed to modify the ToDo list and write the tests in javascrpit `tests.js`.
+   2. Render the ToDo list to the DOM.
+   3. Add another features.
 
 * ## HOW do we start ?
- * ### Defining Requirement :
+* ### Defining Requirement :
 through reading the user stories, we determine the basic requirement that are needed to include them in the web page.
    1. Enter new tasks.
    2. Edit the task.
@@ -22,12 +22,13 @@ through reading the user stories, we determine the basic requirement that are ne
 
  * ### Plan the  main Layout and sections :
    #### Part one :  create pure functions
-  For the first part of the project we created five functions using TDD, which are:  
-    * ###### AddToDo >> add new task.
-    * ###### DeleteToDo >> delete existed task.
-    * ###### MarkToDo >> mark the ToDo as done or not.
-    * ###### SortToDo >> sort the ToDo list based on the state.
-    * ###### EditToDo >> edit specific ToDo .
+  For the first part of the project we created five functions using TDD, which are: 
+  
+     * ######  AddToDo >> add new task.
+     * ######  DeleteToDo >> delete existed task.
+     * ######  MarkToDo >> mark the ToDo as done or not.
+     * ######  SortToDo >> sort the ToDo list based on the state.
+     * ######  EditToDo >> edit specific ToDo .
 
     Every pair in a team chose two function to work in
     and each member in the pair worked in both writing code and tests.
