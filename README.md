@@ -31,8 +31,8 @@ through reading the user stories, we determine the basic requirement that are ne
      EditToDo   : edit specific ToDo .
      
 
-    Every pair in a team chose two function to work in and each member in the pair worked in both writing c
-    ode and tests. These functions are in the todoFunctions object in `logic.js.`
+   Every pair in a team chose two function to work in and each member in the pair worked in both writing code 
+   and tests. These functions are in the todoFunctions object in `logic.js.`
     
    #### Part two : use the TDD functions to build the App
    
@@ -55,4 +55,4 @@ through reading the user stories, we determine the basic requirement that are ne
     
     
 
-    ###### You can visit our site from  <a href="" target="_blank">here</a> .
+    You can visit our site from  <a href="" target="_blank">here</a> .
