@@ -26,10 +26,12 @@
 
     todoNode.addEventListener('click', function(event){
       // add markTodo button
-      this.classList.toggle("marked");
-      // add classes for css
-      this.classList.add("test-class");
+      // this.classList.toggle("marked");
+      // // add classes for css
+      // this.classList.add("test-class");
     });
+
+
 
     return todoNode;
   };

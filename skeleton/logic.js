@@ -54,6 +54,15 @@ var todoFunctions = {
     var sortedTodos = sortFunction(todos);
     return sortedTodos;
   },
+
+  editTodo: function(todos, idToUpdate, newDescription){
+    return todos.map(function(todo){
+      if(idToUpdate === todo.id){
+        todo.description = newDescription;
+      }
+      return todo;
+    });
+  }
 };
 
 // Why is this if statement necessary?
