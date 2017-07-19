@@ -24,14 +24,13 @@ var todoFunctions = {
 
   markTodo: function(todos, idToMark) {
     return todos.map(function (todo) {
-      var newTodo = Object.assign({}, todo);
+       var newTodo = Object.assign({}, todo);
         // console.log(todo);
         if (idToMark === newTodo.id){
           if (newTodo.state === false){
           newTodo.state = true;}
 
-           else if (idToMark === true){
-          newTodo.state = false;}
+           else newTodo.state = false;
         }
       return newTodo;}
     );

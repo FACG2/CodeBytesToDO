@@ -109,6 +109,18 @@ test('Example test', function(t) {
   t.end();
 });
 
+test('Example test', function(t) {
+  var old=[{description:"make",id:1,state:true},{description:"make",id:2,state:false}];
+  var newone=[{description:"make",id:1,state:false},{description:"make",id:2,state:false}];
+  // console.log(old);
+  var actual =  todoFunctions.markTodo(old,1);
+  var expected = newone;
+  // console.log(newone);
+  // console.log(old);
+  t.deepEqual(actual, expected, 'True');
+  t.end();
+});
+
 
 
 // ===================== Test Edit ==================================
