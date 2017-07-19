@@ -21,8 +21,8 @@
    6. Easily read and understand the text on the website.
 
  * ### Plan the  main Layout and sections :
-   #### Part one :  create pure functions
-  For the first part of the project we created five functions using TDD, which are: 
+  #### Part one :  create pure functions
+   For the first part of the project we created five functions using TDD, which are: 
   
      AddToDo    : add new task.
      DeleteToDo : delete existed task.
@@ -34,7 +34,7 @@
    Every pair in a team chose two function to work in and each member in the pair worked in both writing code 
    and tests. These functions are in the todoFunctions object in `logic.js.`
     
-   #### Part two : use the TDD functions to build the App
+  #### Part two : use the TDD functions to build the App
    
    Inside the `dom.js` file, the following modifications are done :
 
@@ -50,7 +50,7 @@
    
    * Store the session data.
 
-   #### Part three : Add Features and styles
+  #### Part three : Add Features and styles
    Write `Html` code and `css` style and integrate them with the DOM file.
     
     
