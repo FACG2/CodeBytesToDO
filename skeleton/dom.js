@@ -6,45 +6,46 @@
   var container = document.getElementById('todo-container');
   var addTodoForm = document.getElementById('add-todo');
 
-  var state = [
-    { id: -3, description: 'first todo' },
-    { id: -2, description: 'second todo' },
-    { id: -1, description: 'third todo' },
-  ]; // this is our initial todoList
+  var state = []; // this is our initial todoList
 
   // This function takes a todo, it returns the DOM node representing that todo
   var createTodoNode = function(todo) {
     var todoNode = document.createElement('li');
     // you will need to use addEventListener
-
+    todoNode.innerHTML = "<span class='description-span'>" + todo.description + "</span>";
     // add span holding description
 
     // this adds the delete button
     var deleteButtonNode = document.createElement('button');
+    deleteButtonNode.textContent = "Delete?";
     deleteButtonNode.addEventListener('click', function(event) {
       var newState = todoFunctions.deleteTodo(state, todo.id);
       update(newState);
     });
     todoNode.appendChild(deleteButtonNode);
 
-    // add markTodo button
-
-    // add classes for css
+    todoNode.addEventListener('click', function(event){
+      // add markTodo button
+      this.classList.toggle("marked");
+      // add classes for css
+      this.classList.add("test-class");
+    });
 
     return todoNode;
   };
 
   // bind create todo form
-  if (addTodoForm) {
+  if(addTodoForm) {
     addTodoForm.addEventListener('submit', function(event) {
       // https://developer.mozilla.org/en-US/docs/Web/Events/submit
       // what does event.preventDefault do?
       // what is inside event.target?
-
-      var description = '?'; // event.target ....
-
+      //stop form from submitting
+     var descriptionInput = event.target;
+      var description = descriptionInput.firstElementChild.value; // event.target ....
       // hint: todoFunctions.addTodo
-      var newState = []; // ?? change this!
+      event.preventDefault();
+      var newState = todoFunctions.addTodo(state, {description: description}); // ?? change this!
       update(newState);
     });
   }
