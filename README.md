@@ -12,7 +12,7 @@
 
 * ## HOW do we start ?
 * ### Defining Requirement :
-through reading the user stories, we determine the basic requirement that are needed to include them in the web page.
+   through reading the user stories, we determine the basic requirement that are needed to include them in the web page.
    1. Enter new tasks.
    2. Edit the task.
    3. View the tasks as done or not.
@@ -51,8 +51,8 @@ through reading the user stories, we determine the basic requirement that are ne
    * Store the session data.
 
    #### Part three : Add Features and styles
-    Write `Html` code and `css` style and integrate them with the DOM file.
+   Write `Html` code and `css` style and integrate them with the DOM file.
     
     
 
-    You can visit our site from  <a href="" target="_blank">here</a> .
+  You can visit our site from  <a href="" target="_blank">here</a> .
