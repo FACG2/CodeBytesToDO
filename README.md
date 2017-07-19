@@ -24,11 +24,11 @@ through reading the user stories, we determine the basic requirement that are ne
    #### Part one :  create pure functions
   For the first part of the project we created five functions using TDD, which are: 
   
-     * ######  AddToDo >> add new task.
-     * ######  DeleteToDo >> delete existed task.
-     * ######  MarkToDo >> mark the ToDo as done or not.
-     * ######  SortToDo >> sort the ToDo list based on the state.
-     * ######  EditToDo >> edit specific ToDo .
+       AddToDo >> add new task.
+       DeleteToDo >> delete existed task.
+       MarkToDo >> mark the ToDo as done or not.
+       SortToDo >> sort the ToDo list based on the state.
+       EditToDo >> edit specific ToDo .
 
     Every pair in a team chose two function to work in
     and each member in the pair worked in both writing code and tests.
