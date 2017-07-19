@@ -30,11 +30,11 @@ through reading the user stories, we determine the basic requirement that are ne
        SortToDo >> sort the ToDo list based on the state.
        EditToDo >> edit specific ToDo .
 
-    Every pair in a team chose two function to work in
-    and each member in the pair worked in both writing code and tests.
+    Every pair in a team chose two function to work in and each member in the pair worked in both writing code and tests.
     These functions are in the todoFunctions object in `logic.js.`
+    
    #### Part two : use the TDD functions to build the App
-Inside the `dom.js` file, the following modifications are done :
+    Inside the `dom.js` file, the following modifications are done :
 
    * ###### create ToDoNode.
 Which creates the ToDo element.
