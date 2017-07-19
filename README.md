@@ -24,33 +24,35 @@ through reading the user stories, we determine the basic requirement that are ne
    #### Part one :  create pure functions
   For the first part of the project we created five functions using TDD, which are: 
   
-     AddToDo >> add new task.
-     DeleteToDo >> delete existed task.
-     MarkToDo >> mark the ToDo as done or not.
-     SortToDo >> sort the ToDo list based on the state.
-     EditToDo >> edit specific ToDo .
+     AddToDo    : add new task.
+     DeleteToDo : delete existed task.
+     MarkToDo   : mark the ToDo as done or not.
+     SortToDo   : sort the ToDo list based on the state.
+     EditToDo   : edit specific ToDo .
+     
 
-    Every pair in a team chose two function to work in and each member in the pair worked in both writing code and tests.
-    These functions are in the todoFunctions object in `logic.js.`
+    Every pair in a team chose two function to work in and each member in the pair worked in both writing c
+    ode and tests. These functions are in the todoFunctions object in `logic.js.`
     
    #### Part two : use the TDD functions to build the App
    
    Inside the `dom.js` file, the following modifications are done :
 
-   * ###### create ToDoNode.
+   * create ToDoNode.
    Which creates the ToDo element.
    
-   * ###### Add newToDo
+   * Add newToDo
    Inside this function you need to create a new state with a new ToDo.
    
-   * ###### Delete the existed tasks.
+   * Delete the existed tasks.
 
-   * ###### Mark the done ToDos.
+   * Mark the done ToDos.
    
-   * ###### Store the session data.
+   * Store the session data.
 
    #### Part three : Add Features and styles
     Write `Html` code and `css` style and integrate them with the DOM file.
     
+    
 
-    You can visit our site from  <a href="" target="_blank">here</a>
+    ###### You can visit our site from  <a href="" target="_blank">here</a> .
