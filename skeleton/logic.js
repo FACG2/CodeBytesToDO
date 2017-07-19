@@ -8,10 +8,15 @@ var todoFunctions = {
   // todoFunctions.generateId() will give you a unique id
   // You do not need to understand the implementation of this function.
   generateId: (function() {
+    var data =JSON.parse(sessionStorage.getItem("idn"));
     var idCounter = 0;
+    if (data!=null){
+    idCounter=data;}
     function incrementCounter() {
-      return (idCounter += 1);
+      sessionStorage.setItem("idn",JSON.stringify(idCounter += 1))
+      return (idCounter);
     }
+
     return incrementCounter;
   })(),
 

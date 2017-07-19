@@ -8,6 +8,8 @@
   var addTodoForm = document.getElementById('add-todo');
   var descriptionInput = document.querySelector("input[name=description]");
   var sesission = JSON.parse(sessionStorage.getItem("names"));
+  // var sesission = JSON.parse(sessionStorage.getItem("data"));
+
   var state;
   if (sesission == null) {
     state = [];
@@ -97,6 +99,7 @@
     state = newState;
     renderState(state);
     sessionStorage.setItem("names", JSON.stringify(state));
+
   };
   // you do not need to change this function
   var renderState = function(state) {
