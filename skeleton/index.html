@@ -3,16 +3,152 @@
   <head>
     <meta charset="utf-8">
     <title>tdd todo</title>
-    <link rel="stylesheet" href="./style.css">
+    <!-- <link rel="stylesheet" href="./style.css"> -->
   </head>
   <body>
-    <form id="add-todo">
-      <input type="text" name="description" value="">
-      <input type="submit" name="submit-btn" value="Submit">
-    </form>
     <div id = "todo-container">
-    </div>
-  </body>
+      <h1>To Do List</h1>
+        <ul>
+        </ul>
+        <p>
+          <label for="add-todo">Add Item</label>
+        </p>
+        <form id="add-todo">
+          <input type="text" id ="des" name="description" value="" >
+          <input type="submit" name="" id ="sub" value="Submit" >
+        </form>
+
+
+    <h3>Todo</h3>
+    <ul id="incomplete-tasks">
+      <!-- <li><input type="checkbox"><label>Pay Bills</label><input type="text"><button class="edit">Edit</button><button class="delete">Delete</button></li>
+      <li class="editMode"><input type="checkbox"><label>Go Shopping</label><input type="text" value="Go Shopping"><button class="edit">Edit</button><button class="delete">Delete</button></li> -->
+
+    </ul>
+
+    <!-- <h3>Completed</h3>
+    <ul id="completed-tasks">
+       <li><input type="checkbox" checked><label>See the Doctor</label><input type="text"><button class="edit">Edit</button><button class="delete">Delete</button></li>
+    </ul> -->
+
+  </div>
   <script type="text/javascript" src = "./logic.js"></script>
   <script type="text/javascript" src = "./dom.js"></script>
+  </body>
 </html>
+<style>
+
+body{
+  background: #CB356B;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #BD3F32, #CB356B);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #BD3F32, #CB356B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+#todo-container {
+  display: block;
+  width: 400px;
+  margin: 100px auto 0;
+}
+h1{
+  text-align: center;
+  display: block;
+ font-size: 2em;
+ -webkit-margin-before: 0.67em;
+ -webkit-margin-after: 0.67em;
+ -webkit-margin-start: 0px;
+ -webkit-margin-end: 0px;
+ font-weight: bold;
+ color: #fff;
+}
+h3,
+label[for='add-todo'] {
+
+  color: #fff;
+  font-weight: 700;
+  font-size: 15px;
+  border-bottom: 2px solid #fff;
+  padding: 30px 0 10px;
+  margin: 0;
+  text-transform: uppercase;
+}
+label[for='add-todo'] {
+  display: block;
+  margin: 0 0 20px;
+}
+input#add-todo {
+  float: left;
+  width: 318px;
+}
+
+ul li input[type=text] {
+  display:none;
+}
+
+ul li.editMode input[type=text] {
+  display:block;
+}
+
+ul li.editMode label {
+  display:none;
+}
+li * {
+  float: left;
+  font-size: 18px;
+    line-height: 40px;
+    width: 180px;
+    padding: 0px 0px 0px 11px;
+    color: #fff;
+}
+li, h3 {
+  clear:both;
+  list-style:none;
+}
+
+input[type="text"] {
+  margin: 0;
+  font-size: 18px;
+  line-height: 18px;
+  height: 18px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  background: #fff;
+  border-radius: 6px;
+  font-family: Lato, sans-serif;
+  color: #888;
+}
+input[type="text"]:focus {
+  color: #333;
+}
+input#des{
+  float: left;
+  width: auto;
+}
+
+#sub  {
+  background: none;
+  border: 0px;
+  color: #fff;
+  font-size: 15px;
+  width: 60px;
+  margin: 10px 20px 0;
+  font-family: Lato, sans-serif;
+  cursor: pointer;
+  height: 18px;
+}
+
+button{
+  background: none;
+
+  border: 0px;
+  color: #fff;
+  font-size: 15px;
+  width: 60px;
+  margin: 0px 0 0;
+  font-family: Lato, sans-serif;
+  cursor: pointer;
+  height: 18px;
+}
+#sub:hover{
+  color: #FFD54F;
+}
+</style>
