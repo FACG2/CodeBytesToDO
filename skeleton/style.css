@@ -155,3 +155,8 @@ button{
       margin-bottom: 10px;
     }
 }
+
+ul li button i{
+  width: auto;
+  margin-top: 7px;
+}
