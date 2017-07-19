@@ -7,12 +7,11 @@ var container = document.getElementById('incomplete-tasks');
 var containertwo= document.getElementById('completed-tasks');
 var addTodoForm = document.getElementById('add-todo');
 var descriptionInput = document.querySelector("input[name=description]");
-var state = []; // this is our initial todoList
-
-
-// This function takes a todo, it returns the DOM node representing that todo
-
-
+var sesission=JSON.parse(sessionStorage.getItem("names"));
+var state;
+if (sesission == null){
+state=[];}
+else { state = JSON.parse(sessionStorage.getItem("names"));}
 var createTodoNode = function(todo) {
 var todoNode = document.createElement('li');
 // you will need to use addEventListener
@@ -78,6 +77,7 @@ update(newState);
 var update = function(newState) {
 state = newState;
 renderState(state);
+sessionStorage.setItem("names", JSON.stringify(state));
 };
 // you do not need to change this function
 var renderState = function(state) {
