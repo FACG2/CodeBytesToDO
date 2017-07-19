@@ -1,13 +1,12 @@
 var test = require('tape');
 var todoFunctions = require('./logic');
 
-
-
 test('Example test', function(t) {
-  var actual =  todoFunctions.addTodo([],{description:'make'});
-  var expected = [{description:"make",id:1,state:false}];
+  var actual =  todoFunctions.addTodo([{id:0,description:"sdhfbsd", state:false}],{description:'make'});
+  var expected = [{id:0,description:"sdhfbsd", state:false},{description:"make",id:1,state:false}];
   t.deepEqual(actual, expected, 'Should return new array');
-
+  t.end();
+}
 
 test('Example test', function(t) {
   var actual = todoFunctions.deleteTodo([{id:0, description: "todo 1", done: false}, {id:1, description: "todo 2", done: true}], 1);
@@ -108,6 +107,4 @@ test('Example test', function(t) {
   console.log(old);
   t.deepEqual(actual, expected, 'True');
   t.end();
-
-  // console.log(newone);
 });

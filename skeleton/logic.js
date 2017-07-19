@@ -9,27 +9,20 @@ var todoFunctions = {
   // You do not need to understand the implementation of this function.
   generateId: (function() {
     var idCounter = 0;
-
     function incrementCounter() {
       return (idCounter += 1);
     }
-
     return incrementCounter;
   })(),
 
   addTodo: function(todos, newTodo) {
-
     newTodo.id = todoFunctions.generateId();
     newTodo.state= false;
     var newtodos= todos.concat(newTodo);
-
     return newtodos;
   },
 
-
   markTodo: function(todos, idToMark) {
-
-
     return todos.map(function (todo) {
       var newTodo = Object.assign({}, todo);
         // console.log(todo);
@@ -40,14 +33,9 @@ var todoFunctions = {
            else if (idToMark === true){
           newTodo.state = false;}
         }
-
-
       return newTodo;}
     );
-
-
  },
-
 
   deleteTodo: function(todos, idToDelete) {
     // should leave the input argument todos unchanged
@@ -62,25 +50,16 @@ var todoFunctions = {
     return updatedTodos;
   },
 
-
-
   sortTodos: function(todos, sortFunction) {
-
-
     var sortedTodos = sortFunction(todos);
     return sortedTodos;
-
   },
-
-
 };
-
 
 // Why is this if statement necessary?
 // The answer has something to do with needing to run code both in the browser and in Node.js
 // See this article for more details:
 // http://www.matteoagosti.com/blog/2013/02/24/writing-javascript-modules-for-both-browser-and-node/
-module.exports = todoFunctions;
 if (typeof module !== 'undefined') {
   module.exports = todoFunctions;
 }
