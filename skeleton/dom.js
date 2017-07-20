@@ -111,6 +111,7 @@
     renderState(state);
     sessionStorage.setItem("names", JSON.stringify(state));
 
+
   };
   // you do not need to change this function
   var renderState = function(state) {
