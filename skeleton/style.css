@@ -55,14 +55,24 @@ ul li.editMode label {
 li * {
   float: left;
   font-size: 18px;
-    line-height: 40px;
-    width: 180px;
+    /*line-height: 40px;*/
+    /*width: 80%;*/
     padding: 0px 0px 0px 11px;
     color: #fff;
+
+
 }
+
+*{
+  outline: none !important;
+}
+
 li, h3 {
   clear:both;
-  list-style:none;
+  /*list-style:none;*/
+}
+ul{
+  list-style-type: none;
 }
 
 input[type="text"] {
@@ -93,20 +103,20 @@ input#des{
   margin: 10px 0px 0;
   font-family: Lato, sans-serif;
   cursor: pointer;
-  height: 18px;
+  /*height: 18px;*/
 }
 
 button{
   background: none;
-
+  outline: none;
   border: 0px;
   color: #fff;
   font-size: 15px;
-  width: 60px;
+  /*width: 60px;*/
   margin: 0px 0 0;
   font-family: Lato, sans-serif;
   cursor: pointer;
-  height: 18px;
+  /*height: 18px;*/
 }
 #sub:hover{
   color: #FFD54F;
@@ -127,6 +137,16 @@ button{
     }
     #des{width:70%;}
     #sub{width:20%;}
+    #incomplete-tasks{
+      width: auto;
+    }
+    .description-span{
+      width: 60%;
+        }
+        .fa{
+          width:20%;
+        }
+
 }
 
 @media screen and (min-width: 550px) and (max-width:992px){
@@ -137,10 +157,20 @@ button{
     }
     #des{width:70%;}
     #sub{width:20%;}
+    #incomplete-tasks{
+      width: auto;
+    }
+    .description-span{
+      width: 60%;
+        }
+        .fa{
+          width:20%;
+        }
+
 }
 
 
-@media screen and (min-width: 343px) and (max-width:550px){
+@media screen and  (max-width:550px){
     #todo-container{width:90%;}
     #add-todo{
         width: 100%;
@@ -154,6 +184,15 @@ button{
       width:20%;
       margin-bottom: 10px;
     }
+    #incomplete-tasks{
+      width: auto;
+    }
+    .description-span{
+      width: 60%;
+        }
+        .fa{
+          width:20%;
+        }
 }
 
 ul li button i{
