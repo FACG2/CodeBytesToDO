@@ -8,7 +8,6 @@
   var addTodoForm = document.getElementById('add-todo');
   var descriptionInput = document.querySelector("input[name=description]");
   var sesission = JSON.parse(sessionStorage.getItem("names"));
-  // var sesission = JSON.parse(sessionStorage.getItem("data"));
 
   var state;
   if (sesission == null) {
@@ -58,6 +57,14 @@
 
     todoNode.firstElementChild.addEventListener('dblclick', function(event) {
       var str = prompt("Enter New Description:");
+      if(str.trim() === ""){
+        alert('unable to edit the todo \nyou are entering an empty text!!');
+        return;
+      }
+      if(str.length > 50){
+        alert("You should enter a text within 50 letters\nunable to update todo");
+        return;
+      }
       var newState = todoFunctions.editTodo(state, todo.id, str);
       update(newState);
     });
@@ -79,6 +86,10 @@
       descriptionInput.firstElementChild.value = "";
       // event.target ....
       // hint: todoFunctions.addTodo
+      if(description.trim() === ""){
+        alert('unable to create the list \nyou are entering an empty todo!!');
+        return;
+      }
       event.preventDefault();
       var newState = todoFunctions.addTodo(state, {
         description: description
